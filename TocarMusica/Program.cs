@@ -23,31 +23,42 @@ namespace TocarMusica
             Console.WriteLine("9 - RAR?");
             Console.WriteLine("10 - WIFI ANTENNAS");
             Console.WriteLine();
-            Console.Write("Digite 2 números que somados dão a sua escolha: ");
+            Console.WriteLine("Digite 2 números que somados dão a sua escolha: ");
 
-
-            try
+            string[] vect = new string[testes];
+            for (int i = 0; i < testes; i++)
             {
-                for (int i = 1; i < testes + 1; i++)
-                {
 
-                    string[] valores = Console.ReadLine().Split(' ');
-                    int valor1 = int.Parse(valores[0]);
-                    int valor2 = int.Parse(valores[1]);
+                vect[i] = Console.ReadLine();
+
+
+
+            }
+
+            for (int i = 0; i < testes; i++)
+            {
+                try
+                {
+                    string[] valor = vect[i].Split(' ');
+                    int valor1 = int.Parse(valor[0]);
+                    int valor2 = int.Parse(valor[1]);
 
                     EscolhaMusica escolha = new EscolhaMusica(valor1, valor2);
 
-                    Console.WriteLine(escolha.Escolha());
+                    escolha.Escolha();
+                }
+
+
+                catch (Exception ex)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Faltou número");
+                    Console.WriteLine();
                 }
 
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(" ");
-            }
-
-
-
+            Console.WriteLine();
+            Console.WriteLine();
             Console.WriteLine("Precione qualquer tecla para fechar: ");
 
         }

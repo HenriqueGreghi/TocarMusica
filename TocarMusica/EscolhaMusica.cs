@@ -19,48 +19,48 @@ namespace TocarMusica
             Valor1 = valor1;
             Valor2 = valor2;
         }
-        public string Escolha()
+        public void Escolha()
         {
             Soma = Valor1 + Valor2;
             switch (Soma)
             {
                 case 0:
-                    return "PROXYCITY";
-                        
+                    Console.WriteLine("PROXYCITY");
+                    break;  
                 case 1:
-                    return "P.Y.N.G.";
-                        
+                    Console.WriteLine("P.Y.N.G.");
+                    break;
                 case 2:
-                    return "DNSUEY!";
-                        
+                    Console.WriteLine("DNSUEY!");
+                    break;
                 case 3:
-                    return "SERVERS";
-                        
+                    Console.WriteLine("SERVERS");
+                    break;
                 case 4:
-                    return "HOST!";
-                        
+                    Console.WriteLine("HOST!");
+                    break;
                 case 5:
-                    return "CRIPTONIZE";
-                        
+                    Console.WriteLine("CRIPTONIZE");
+                    break;
                 case 6:
-                    return "OFFLINE DAY";
-                        
+                    Console.WriteLine("OFFLINE DAY");
+                    break;
                 case 7:
-                    return "SALT";
-                       
+                    Console.WriteLine("SALT");
+                    break;
                 case 8:
-                    return "ANSWER!";
-                        
+                    Console.WriteLine("ANSWER!");
+                    break;
                 case 9:
-                    return"RAR ?";
-                       
+                    Console.WriteLine("RAR ?");
+                    break;
                 case 10:
-                    return "WIFI ANTENNAS";
-                        
+                    Console.WriteLine("WIFI ANTENNAS");
+                    break;
 
                 default:
-                    return "Valor muito alto";
-                    
+                    Console.WriteLine("Valor muito alto");
+                    break;
             }
         }
 
